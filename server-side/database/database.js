@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 module.exports = () => {
-    const db = 'mongodb://127.0.0.1/fitness-tracker';
+    const db = 'mongodb://localhost:27017/fitness-tracker';
     mongoose.connect(db);
 
     const connection = mongoose.connection;
