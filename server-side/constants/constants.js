@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const DEFAULT_PORT = 3000;
+const DEFAULT_PORT = 5000;
 
 const SCHEMA_TYPES = {
     STRING: mongoose.Schema.Types.String,
@@ -20,7 +20,7 @@ const MODELS = {
     DAILY_WORKOUTS: 'DailyWorkouts',
     DAILY_MEALS: 'DailyMeals',
     ACHIEVEMENTS: 'Achievements',
-}
+};
 
 module.exports = {
     DEFAULT_PORT,
