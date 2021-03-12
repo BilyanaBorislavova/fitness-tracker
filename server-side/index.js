@@ -18,5 +18,5 @@ express.get('/', (req, res) => {
 express.use('/auth', registerRoute);
 
 express.listen(PORT, () => {
-    console.log('App is running successfully!');
+    console.log(`App is running successfully on port ${PORT}!`);
 });

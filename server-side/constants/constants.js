@@ -5,6 +5,7 @@ const DEFAULT_PORT = 5000;
 const SCHEMA_TYPES = {
     STRING: mongoose.Schema.Types.String,
     OBJECT_ID: mongoose.Schema.Types.ObjectId,
+    ARRAY: mongoose.Schema.Types.Array,
 };
 
 const ENCRYPTION = {
@@ -22,9 +23,15 @@ const MODELS = {
     ACHIEVEMENTS: 'Achievements',
 };
 
+const USER_ROLES = {
+    USER: 'user',
+    ADMIN: 'admin',
+};
+
 module.exports = {
     DEFAULT_PORT,
     SCHEMA_TYPES,
     ENCRYPTION,
     MODELS,
+    USER_ROLES,
 };
