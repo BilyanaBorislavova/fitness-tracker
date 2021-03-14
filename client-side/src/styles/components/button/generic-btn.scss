@@ -1,0 +1,25 @@
+@import '../../tools/mixins.scss';
+
+.btn {
+    @include font-family-open-sans-light();
+    font-weight: 700;
+    border: none;
+    background: unset;
+    font-size: 15px;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 8px;
+    color: #fff;
+
+    &-primary {
+        background: #44a9f8;
+    }
+
+    &-secondary {
+        background: #605ed5;
+    }
+
+    &-ternary {
+        background: #a7ce3b;
+    }
+}
