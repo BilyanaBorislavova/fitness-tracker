@@ -1,0 +1,38 @@
+@import '../../tools/mixins.scss';
+
+.input-with-label {
+    position: relative;
+
+    &-field {
+        @include font-family-open-sans();
+        min-height: 50px;
+        border-radius: 4px;
+        padding: 0 10px;
+        border: 1px solid rgb(155, 153, 153);
+
+        &:not(:placeholder-shown),
+        &:focus {
+            outline: none;
+            border: 2px solid #6200ee;
+
+            + .input-with-label-floating-label {
+                font-size: 15px;
+                top: -5.5px;
+                transition: top 150ms cubic-bezier(0.4, 0, 0.2, 1);
+                background-color: #fff;
+            }
+        }
+
+        &::placeholder {
+            color: transparent;
+        }
+    }
+
+    &-floating-label {
+        position: absolute;
+        font-size: 16px;
+        top: 17px;
+        left: 10px;
+        z-index: 1;
+    }
+}
