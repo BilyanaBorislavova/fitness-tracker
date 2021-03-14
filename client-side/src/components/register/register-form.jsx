@@ -7,8 +7,8 @@ import AuthenticationService from '../../services/authentication';
 import EmailInput from '../input/email-input';
 import NameInput from '../input/name-input';
 import UsernameInput from '../input/username-input';
-import GenericBtn from '../button/generic-btn';
 import PasswordInput from '../input/password-input';
+import RegisterCta from './register-cta';
 
 const authenticationService = new AuthenticationService();
 
@@ -27,7 +27,7 @@ const RegisterForm = () => {
         email,
         password,
       };
-      console.log()
+
       try {
         await authenticationService.register(user);
       } catch (err) {
@@ -70,7 +70,7 @@ const RegisterForm = () => {
               onChange={onEmailChange}
               label="Email *"
             />
-            <input type="submit" value="Register" />
+            <RegisterCta />
         </Form>
     )
 };
